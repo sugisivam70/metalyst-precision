@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Metalyst Precision Private Limited</title>
-    <link rel="icon" href="img/logo.png" />
+    <title>Metalyst Precision</title>
+    <link rel="icon" href="img/logo-metalyst.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
@@ -25,6 +25,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <style>
+    :root {
+      --blue-500: #0f67f4;
+      --blue-600: #007bff;
+      --blue-700: #1e73e8;
+      --ink: #0f1f33;
+      --muted: #5c6b7d;
+      --surface: #f4f9ff;
+      --surface-soft: #eef5ff;
+      --border: #dbe8f8;
+    }
+
     /* Reset */
     * {
       margin: 0;
@@ -34,8 +45,8 @@
     }
 
     body {
-      background: #fff;
-      color: #111;
+      background: #ffffff;
+      color: var(--ink);
       line-height: 1.6;
     }
 
@@ -59,9 +70,10 @@
     }
 
     .service-hero {
-      background-image: url(img/10506876.jpg);
+      background-image:
+        linear-gradient(115deg, rgba(7, 24, 44, 0.72), rgba(14, 74, 168, 0.48)),
+        url("img/hero/Speed-CNC-machining-hero-2048x1367-1.jpg");
       background-size: cover;
-
       object-fit: contain;
       background-position: center;
       padding: 100px 30px;
@@ -85,7 +97,7 @@
 
     .service-hero-content h2 span {
       font-weight: 700;
-      color: #ffdd00;
+      color: #9fd6ff;
     }
 
     .bg-text {
@@ -95,7 +107,8 @@
       line-height: 1;
       bottom: 30px;
       left: 30px;
-      color: #0f67f4;
+      color: #b7ddff;
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     }
     @media (max-width: 446px) {
       .service-hero-content h2 {
@@ -237,13 +250,13 @@
     }
 
     .stat.green {
-      background: #f0fdf4;
+      background: #eef5ff;
       color: #111;
-      border: 1px solid #cce8d8;
+      border: 1px solid #dbe8f8;
     }
 
     .stat.lightgreen {
-      background: #d9f99d;
+      background: #dcecff;
       color: #111;
     }
 
@@ -264,7 +277,7 @@
     }
 
     .machine-sec h2 span {
-      color: #e60012; /* Red Plus */
+      color: #007bff;
       margin-left: 10px;
     }
 
@@ -363,7 +376,7 @@
     }
 
     .work-header h2 span {
-      color: #3fa9f5;
+      color: #1e73e8;
     }
 
     .work-header p {
@@ -427,7 +440,7 @@
 
     /* CTA button */
     .cta-btn {
-      background: #0095ff;
+      background: #1e73e8;
       border: none;
       padding: 12px 20px;
       color: #fff;
@@ -438,7 +451,7 @@
     }
 
     .cta-btn:hover {
-      background: #2a7fb6;
+      background: #0f67f4;
     }
 
     /* Special card sizing */
@@ -478,6 +491,72 @@
       font-family: "poppins", sans-serif;
     }
 
+    .contact-highlights {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 46px 20px 10px;
+    }
+
+    .contact-headline {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .contact-headline h2 {
+      font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .contact-headline h2 span {
+      color: var(--blue-700);
+    }
+
+    .contact-headline p {
+      color: var(--muted);
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .highlight-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 18px;
+      box-shadow: 0 6px 16px rgba(18, 52, 94, 0.08);
+    }
+
+    .highlight-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--surface-soft);
+      color: var(--blue-700);
+      margin-bottom: 12px;
+      font-size: 1.05rem;
+    }
+
+    .highlight-card h3 {
+      font-size: 1.02rem;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .highlight-card p {
+      font-size: 0.93rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
     .enquiry-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -510,7 +589,11 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
+      background: linear-gradient(
+        180deg,
+        rgba(7, 23, 45, 0.35),
+        rgba(7, 23, 45, 0.72)
+      );
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -540,26 +623,27 @@
     }
 
     .contact-icons i:hover {
-      background: rgba(255, 217, 0, 0.3);
+      background: rgba(30, 115, 232, 0.38);
       transform: scale(1.1);
     }
 
     .enquiry-right {
       padding: 40px;
-      background: #f9f9f9;
+      background: var(--surface);
       border-radius: 12px;
+      border: 1px solid var(--border);
     }
 
     .enquiry-right h2 {
       font-size: 1.8rem;
       font-weight: 700;
-      color: #111;
+      color: var(--ink);
       margin-bottom: 5px;
     }
 
     .enquiry-subtitle {
       font-size: 1.1rem;
-      color: #555;
+      color: var(--muted);
       margin-bottom: 30px;
       font-weight: 600;
     }
@@ -576,18 +660,19 @@
     .form-group textarea {
       width: 100%;
       padding: 12px 15px;
-      border: 1px solid #ddd;
+      border: 1px solid #cfdbeb;
       border-radius: 6px;
       font-family: "poppins", sans-serif;
       font-size: 0.95rem;
       transition: all 0.3s;
+      background: #ffffff;
     }
 
     .form-group input:focus,
     .form-group textarea:focus {
       outline: none;
-      border-color: #007bff;
-      box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+      border-color: var(--blue-600);
+      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.16);
     }
 
     .form-group textarea {
@@ -598,7 +683,7 @@
     .submit-btn {
       width: 100%;
       padding: 12px 20px;
-      background: #ff8c00;
+      background: linear-gradient(135deg, var(--blue-700), var(--blue-500));
       color: #fff;
       border: none;
       border-radius: 6px;
@@ -610,9 +695,50 @@
     }
 
     .submit-btn:hover {
-      background: #e67e00;
+      background: linear-gradient(135deg, var(--blue-500), #0d56cb);
       transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(255, 140, 0, 0.3);
+      box-shadow: 0 6px 18px rgba(30, 115, 232, 0.35);
+    }
+
+    .requirements-box {
+      margin-top: 18px;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--blue-600);
+      border-radius: 10px;
+      background: #ffffff;
+      padding: 14px 14px 10px;
+    }
+
+    .requirements-box h4 {
+      font-size: 0.96rem;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+
+    .requirements-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .requirements-list li {
+      position: relative;
+      padding-left: 15px;
+      margin-bottom: 6px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+
+    .requirements-list li::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--blue-600);
+      position: absolute;
+      left: 0;
+      top: 9px;
     }
 
     .contact-info {
@@ -621,11 +747,11 @@
       gap: 12px;
       margin-top: 20px;
       padding-top: 20px;
-      border-top: 1px solid #ddd;
+      border-top: 1px solid var(--border);
     }
 
     .info-link {
-      color: #333;
+      color: var(--ink);
       text-decoration: none;
       font-weight: 500;
       display: flex;
@@ -635,18 +761,18 @@
     }
 
     .info-link i {
-      color: #ff8c00;
+      color: var(--blue-700);
     }
 
     .info-link:hover {
-      color: #ff8c00;
+      color: var(--blue-600);
       transform: translateX(5px);
     }
 
     /* Map Section */
     .map-section {
       padding: 60px 20px;
-      background: #f5f5f5;
+      background: var(--surface-soft);
     }
 
     .map-container {
@@ -671,17 +797,18 @@
       padding: 30px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border);
     }
 
     .address-box h3 {
       font-size: 1.5rem;
       font-weight: 700;
-      color: #111;
+      color: var(--ink);
       margin-bottom: 15px;
     }
 
     .address-box p {
-      color: #555;
+      color: var(--muted);
       font-size: 1rem;
       line-height: 1.8;
       display: flex;
@@ -690,13 +817,21 @@
     }
 
     .address-box i {
-      color: #ff8c00;
+      color: var(--blue-700);
       font-size: 1.2rem;
       margin-top: 2px;
     }
 
     /* Responsive */
     @media (max-width: 768px) {
+      .contact-highlights {
+        padding: 34px 14px 8px;
+      }
+
+      .highlights-grid {
+        grid-template-columns: 1fr;
+      }
+
       .enquiry-container {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -726,28 +861,24 @@
   <body>
     <header class="navbar">
       <div class="logo">
-        <img src="img/logo.png" alt="Metalyst Precision logo" />
+        <img src="img/logo-metalyst.png" alt="Metalyst Precision logo" />
         <div class="brand-copy">
-          <span class="brand-name">Metalyst Precision Pvt. Ltd.</span>
-          <span class="brand-sub">Precision Machining Partner</span>
+          <span class="brand-name">Metalyst Precision Private Limited</span>
+          <span class="brand-sub">Precision Manufacturing Partner</span>
         </div>
       </div>
       <button class="menu-toggle" aria-label="Toggle menu">
         <i class="fas fa-bars"></i>
       </button>
       <nav class="nav-links">
-        <a href="index.html">Home</a>
+        <a href="index.html#service">Services</a>
+        <a href="index.html#project">Projects</a>
+        <a href="index.html#process">Process</a>
         <a href="precision.html">Precision</a>
         <a href="machine.html">Our Machines</a>
-        <a
-          href="https://maps.app.goo.gl/YwzaSE9wYyrj9JaE9?g_st=iw"
-          target="_blank"
-          rel="noopener"
-          >Location</a
-        >
         <a href="contact.html">Contact</a>
         <a
-          href="https://wa.me/919844484145?text=Hi%20Metalyst%20Precision%20Private%20Limited!%20I%20am%20interested%20in%20your%20precision%20machining%20solutions.%20Can%20you%20provide%20more%20details?"
+          href="https://wa.me/919844484145?text=Hello%20Metalyst%20Precision%20Private%20Limited%2C%20I%20am%20interested%20in%20your%20machining%20services."
           class="btn-yellow"
           >Enquiry ➜</a
         >
@@ -757,11 +888,47 @@
     <section class="service-hero" id="services">
       <div class="service-hero-content">
         <h2>
-          For Quality, Delivery & Support <br /><span
-            >Metalyst Precision Private Limited</span
+          For Quality, Delivery & Technical Support <br /><span
+            >Metalyst Precision</span
           >
         </h2>
         <h1 class="bg-text">Contact</h1>
+      </div>
+    </section>
+
+    <section class="contact-highlights">
+      <div class="contact-headline">
+        <h2>Let’s Build Your <span>Next Component</span></h2>
+        <p>
+          Share your drawing, material, quantity, and timeline. Our team reviews
+          feasibility and responds with the right machining plan.
+        </p>
+      </div>
+      <div class="highlights-grid">
+        <article class="highlight-card">
+          <div class="highlight-icon"><i class="fas fa-file-alt"></i></div>
+          <h3>Drawing-Based RFQ Support</h3>
+          <p>
+            Fast review of customer drawings with process planning support for
+            milling, drilling, turning, and wire-cut jobs.
+          </p>
+        </article>
+        <article class="highlight-card">
+          <div class="highlight-icon"><i class="fas fa-circle-check"></i></div>
+          <h3>Quality First Execution</h3>
+          <p>
+            QMS-oriented process control with stage-wise checks to deliver
+            reliable dimensional and finish quality.
+          </p>
+        </article>
+        <article class="highlight-card">
+          <div class="highlight-icon"><i class="fas fa-clock"></i></div>
+          <h3>Committed Delivery Response</h3>
+          <p>
+            Practical planning and communication from enquiry to dispatch, with
+            focus on on-time delivery commitments.
+          </p>
+        </article>
       </div>
     </section>
 
@@ -771,9 +938,12 @@
         <!-- Left Side - Contact Image & Info -->
         <div class="enquiry-left">
           <div class="contact-image">
-            <img src="img/logo.png" alt="Contact Us" />
+            <img
+              src="img/hero/Speed-CNC-machining-hero-2048x1367-1.jpg"
+              alt="CNC machining facility"
+            />
             <div class="contact-overlay">
-              <h3>CONTACT US</h3>
+              <h3>METALYST PRECISION</h3>
               <div class="contact-icons">
                 <i class="fas fa-envelope"></i>
                 <i class="fas fa-cog"></i>
@@ -787,10 +957,10 @@
 
         <!-- Right Side - Form -->
         <div class="enquiry-right">
-          <h2>Contact Us</h2>
+          <h2>Request a Quote</h2>
           <p class="enquiry-subtitle">
-            MANUFACTURE AND SUPPLY OF PRECISION MACHINED COMPONENTS, JIGS &
-            FIXURES, DIES & MOULDS.
+            Share your machining requirement for planning, manufacturing, and QA
+            support
           </p>
 
           <form class="enquiry-form" id="enquiryForm">
@@ -818,19 +988,38 @@
             <button type="submit" class="submit-btn">Submit</button>
           </form>
 
+          <div class="requirements-box">
+            <h4>For faster quotation, please include:</h4>
+            <ul class="requirements-list">
+              <li>Part drawing number and revision details</li>
+              <li>Material grade and required quantity</li>
+              <li>Tolerance, finishing, and inspection expectations</li>
+              <li>Target delivery schedule and destination</li>
+            </ul>
+          </div>
+
           <div class="contact-info">
-            <a href="mailto:metalystprecision@gmail.com" class="info-link">
+            <a href="mailto:bimetalbearings@gmail.com" class="info-link">
               <i class="fas fa-envelope"></i>
-              metalystprecision@gmail.com
+              bimetalbearings@gmail.com
             </a>
-            <a href="tel:+919844484145" class="info-link">
+            <a href="tel:+919008835175" class="info-link">
               <i class="fas fa-phone"></i>
-              +91 9844484145
+              +91 9008835175
             </a>
-            <span class="info-link"
-              ><i class="fas fa-user-tie"></i> Director: Manojkumar N
-              Balooragi</span
+            <a href="tel:08028365175" class="info-link">
+              <i class="fas fa-phone"></i>
+              080 - 28365175
+            </a>
+            <a
+              href="https://www.bimetalbearings.in"
+              class="info-link"
+              target="_blank"
+              rel="noopener"
             >
+              <i class="fas fa-globe"></i>
+              www.bimetalbearings.in
+            </a>
           </div>
         </div>
       </div>
@@ -840,8 +1029,8 @@
     <section class="map-section">
       <div class="map-container">
         <iframe
-          title="Metalyst Precision Location Map"
-          src="https://www.google.com/maps?q=Ground%20%2306%2C%205th%20Cross%20Road%2C%20Veerbhadreshwara%20Nagara%2C%20Herohalli%2C%20Bengaluru%20560091&output=embed"
+          title="Bimetal Bearings Location Map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.2267!2d77.4943532!3d13.0002275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d93843cdb1d:0x3231f6ff56b44764!2sBimetal%20Bearings%20(Bangalore)!5e0!3m2!1sen!2sin!4v1711342800000"
           width="100%"
           height="500"
           allowfullscreen=""
@@ -854,8 +1043,17 @@
           <h3>Our Location</h3>
           <p>
             <i class="fas fa-map-marker-alt"></i>
-            Ground #06, 5th Cross Road, Veerbhadreshwara Nagara, Herohalli,
-            Bengaluru - 560091
+            Sy. No. 52/3A, Site No. 384, 1st Cross, Thigalarapalya Main Road,
+            Karihobanahalli, Near Peenya 2nd Stage, Bangalore - 560 058
+          </p>
+          <p>
+            <i class="fas fa-business-time"></i>
+            Working Hours: Monday to Saturday, 9:00 AM to 6:00 PM
+          </p>
+          <p>
+            <i class="fas fa-reply"></i>
+            Enquiry Response: We usually respond to RFQ emails within one
+            business day.
           </p>
         </div>
       </div>
@@ -865,16 +1063,12 @@
       <div class="footer-container">
         <!-- Left Column -->
         <div class="footer-brand">
-            <img
-              src="img/logo.png"
-              alt="Metalyst Precision Logo"
-              class="logo"
-            />
-            <p>
-              MANUFACTURE AND SUPPLY OF PRECISION MACHINED COMPONENTS, JIGS &
-              FIXURES, DIES & MOULDS.
-            </p>
-          </div>
+          <img
+            src="img/logo-metalyst.png"
+            alt="Metalyst Precision Logo"
+            class="logo"
+          />
+        </div>
 
         <!-- Quick Menu -->
         <div class="footer-links">
@@ -909,7 +1103,7 @@
               <i class="fab fa-instagram"></i>
             </a>
             <a
-              href="https://wa.me/919844484145?text=Hello%20Metalyst%20Precision%20Private%20Limited%2C%20I%20am%20interested%20in%20your%20precision%20machining%20solutions."
+              href="https://wa.me/919844484145?text=Hello%20Metalyst%20Precision%20Private%20Limited%2C%20I%20am%20interested%20in%20your%20machining%20services."
               target="_blank"
               rel="noopener"
               title="WhatsApp"
@@ -928,13 +1122,9 @@
               rel="noopener"
             >
               <i class="fas fa-map-marker-alt"></i>
-              Ground #06, 5th Cross Road, Veerbhadreshwara Nagara, Herohalli,
-              Bengaluru - 560091
+              #61, 1st Main Road, 2nd Cross, Nadakerappa Industrial Estate,
+              Andrahalli Main Road, Peenya 2nd Stage, Bangalore - 560091
             </a>
-          </p>
-
-          <p>
-            <i class="fas fa-user-tie"></i> Director: Manojkumar N Balooragi
           </p>
 
           <p>
@@ -945,7 +1135,7 @@
 
           <p>
             <a
-              href="mailto:metalystprecision@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=metalystprecision@gmail.com"
               target="_blank"
               rel="noopener"
             >
@@ -956,7 +1146,10 @@
       </div>
 
       <div class="footer-bottom">
-        <p>© Copyright 2026. Metalyst Precision Private Limited.</p>
+        <p>
+          © Copyright 2026. Metalyst Precision Private Limited. All rights
+          reserved.
+        </p>
       </div>
     </footer>
 
@@ -1128,7 +1321,7 @@ ${data.message}
             `;
 
             // Send email using mailto (opens email client)
-            window.location.href = `mailto:metalystprecision@gmail.com?subject=${encodeURIComponent(
+            window.location.href = `mailto:bimetalbearings@gmail.com?subject=${encodeURIComponent(
               subject,
             )}&body=${encodeURIComponent(body)}`;
 
