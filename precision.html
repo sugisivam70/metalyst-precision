@@ -1,0 +1,1062 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bimetal Precision</title>
+    <link rel="icon" href="img/logo.png" />
+
+    <link rel="stylesheet" href="style.css?v=2" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --text-main: #162534;
+        --text-muted: #566779;
+        --accent: #007bff;
+        --accent-soft: #1e73e8;
+        --surface: #ffffff;
+        --surface-soft: #f4f9ff;
+        --border: #e4edf5;
+      }
+
+      body {
+        font-family: "Inter", "Poppins", sans-serif;
+        color: var(--text-main);
+        background: #ffffff;
+      }
+
+      .service-hero {
+        padding: 118px 24px 64px;
+        background:
+          radial-gradient(
+            circle at 12% 18%,
+            rgba(43, 108, 176, 0.14),
+            transparent 38%
+          ),
+          radial-gradient(
+            circle at 86% 14%,
+            rgba(94, 170, 245, 0.16),
+            transparent 42%
+          ),
+          #f2f8ff;
+      }
+
+      .service-hero-content {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 38px 34px;
+        border-radius: 26px;
+        border: 1px solid rgba(20, 52, 74, 0.1);
+        background: rgba(255, 255, 255, 0.92);
+        box-shadow: 0 18px 46px rgba(16, 34, 52, 0.08);
+      }
+
+      .service-hero-content h2 {
+        margin: 0;
+        font-size: clamp(1.8rem, 3vw, 2.8rem);
+        font-weight: 500;
+        line-height: 1.22;
+      }
+
+      .service-hero-content h2 span {
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      .bg-text {
+        margin: 10px 0 0;
+        font-size: clamp(2.3rem, 5vw, 4.4rem);
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+        color: #0f67f4;
+      }
+
+      .precision-intro {
+        margin-top: 14px;
+        max-width: 720px;
+        color: var(--text-muted);
+        font-size: 0.98rem;
+        line-height: 1.75;
+      }
+
+      .precision-cta-row {
+        margin-top: 18px;
+      }
+
+      .view-precision-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #ffffff;
+        background: var(--accent);
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          background-color 0.25s ease;
+      }
+
+      .view-precision-btn:hover {
+        transform: translateY(-2px);
+        background: #1e73e8;
+        box-shadow: 0 10px 20px rgba(30, 115, 232, 0.28);
+      }
+
+      .services,
+      .popular-details,
+      .work-section {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 56px 20px;
+      }
+
+      .services {
+        text-align: center;
+      }
+
+      .services h2,
+      .section-header h2 {
+        font-size: clamp(1.7rem, 2.8vw, 2.5rem);
+        line-height: 1.2;
+        color: var(--text-main);
+      }
+
+      .services p,
+      .section-header p {
+        color: var(--text-muted);
+        line-height: 1.75;
+      }
+
+      .services > p {
+        max-width: 760px;
+        margin: 0.8rem auto 1.9rem;
+      }
+
+      .cards,
+      .details-grid {
+        display: grid;
+        gap: 14px;
+      }
+
+      .cards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .card,
+      .detail-card,
+      .upload-card {
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: var(--surface);
+        box-shadow: 0 8px 20px rgba(15, 32, 45, 0.05);
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          border-color 0.25s ease;
+      }
+
+      .card {
+        padding: 16px;
+        text-align: left;
+      }
+
+      .card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 12px;
+      }
+
+      .card h3 {
+        margin: 0 0 0.45rem;
+        font-size: 1.06rem;
+        color: var(--text-main);
+      }
+
+      .card p {
+        margin: 0 0 0.7rem;
+        font-size: 0.9rem;
+      }
+
+      .card a {
+        color: var(--accent);
+        text-decoration: none;
+        font-size: 0.86rem;
+        font-weight: 600;
+      }
+
+      .popular-details {
+        padding-top: 12px;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 1.8rem;
+      }
+
+      .section-header .tag {
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: #e8f2ff;
+        color: var(--accent-soft);
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .section-header h2 {
+        margin-top: 0.85rem;
+      }
+
+      .section-header h2 span {
+        color: var(--accent);
+      }
+
+      .details-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .detail-card {
+        padding: 16px;
+      }
+
+      .detail-card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 12px;
+      }
+
+      .detail-card h3 {
+        margin: 0 0 0.6rem;
+        font-size: 1.02rem;
+      }
+
+      .detail-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .detail-card li {
+        margin-bottom: 6px;
+        color: var(--text-muted);
+        font-size: 0.88rem;
+        line-height: 1.6;
+      }
+
+      .upload-card {
+        padding: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--surface-soft);
+      }
+
+      .upload-box h3 {
+        margin: 0 0 0.6rem;
+        font-size: 1.1rem;
+      }
+
+      .upload-box p {
+        margin: 0 0 0.95rem;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        line-height: 1.7;
+      }
+
+      .upload-box .btn-primary {
+        display: inline-block;
+        text-decoration: none;
+      }
+
+      .work-section {
+        padding-top: 12px;
+        padding-bottom: 72px;
+      }
+
+      .work-shell {
+        display: grid;
+        grid-template-columns: minmax(280px, 0.95fr) minmax(0, 1.35fr);
+        gap: 14px;
+      }
+
+      .work-overview {
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: linear-gradient(180deg, #ffffff 0%, #f8fbfe 100%);
+        padding: 24px 20px;
+        box-shadow: 0 8px 20px rgba(15, 32, 45, 0.05);
+      }
+
+      .work-kicker {
+        display: inline-block;
+        margin-bottom: 0.7rem;
+        padding: 5px 10px;
+        border-radius: 999px;
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent-soft);
+        background: #e8f2ff;
+        font-weight: 600;
+      }
+
+      .work-overview h2 {
+        margin: 0;
+        font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+        line-height: 1.2;
+        color: var(--text-main);
+      }
+
+      .work-overview h2 span {
+        color: var(--accent);
+      }
+
+      .work-overview p {
+        margin: 0.8rem 0 1.1rem;
+        color: var(--text-muted);
+        line-height: 1.75;
+        font-size: 0.93rem;
+      }
+
+      .work-points {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .work-points li {
+        position: relative;
+        padding-left: 16px;
+        margin-bottom: 8px;
+        color: var(--text-muted);
+        font-size: 0.88rem;
+        line-height: 1.6;
+      }
+
+      .work-points li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--accent-soft);
+      }
+
+      .work-points-cert {
+        margin-top: 10px;
+        display: grid;
+        gap: 10px;
+      }
+
+      .work-showcase {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .prdimg-section {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 0 20px 72px;
+      }
+
+      .prdimg-header {
+        text-align: center;
+        margin-bottom: 18px;
+      }
+
+      .prdimg-header h2 {
+        margin: 0;
+        font-size: clamp(1.6rem, 2.8vw, 2.3rem);
+        color: var(--text-main);
+      }
+
+      .prdimg-header h2 span {
+        color: var(--accent);
+      }
+
+      .prdimg-header p {
+        max-width: 760px;
+        margin: 0.8rem auto 0;
+        color: var(--text-muted);
+        line-height: 1.7;
+      }
+
+      .prdimg-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .prdimg-card {
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        overflow: hidden;
+        background: #ffffff;
+        box-shadow: 0 8px 20px rgba(15, 32, 45, 0.05);
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          border-color 0.25s ease;
+      }
+
+      .prdimg-card img {
+        width: 100%;
+        height: 210px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .prdimg-card.extra {
+        display: none;
+      }
+
+      .prdimg-card:hover {
+        transform: translateY(-4px);
+        border-color: #d8e4f0;
+        box-shadow: 0 14px 30px rgba(15, 32, 45, 0.1);
+      }
+
+      .prdimg-actions {
+        text-align: center;
+        margin-top: 18px;
+      }
+
+      .prdimg-view-more {
+        display: inline-block;
+        text-decoration: none;
+        border: none;
+        border-radius: 999px;
+        background: #1e73e8;
+        color: #ffffff;
+        padding: 10px 22px;
+        font-size: 0.92rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          background-color 0.25s ease;
+      }
+
+      .prdimg-view-more:hover {
+        transform: translateY(-2px);
+        background: #0f67f4;
+        box-shadow: 0 10px 20px rgba(15, 103, 244, 0.3);
+      }
+
+      .work-articles {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 0 20px 72px;
+      }
+
+      .work-articles-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .work-tile {
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        overflow: hidden;
+        background: #ffffff;
+        box-shadow: 0 8px 20px rgba(15, 32, 45, 0.05);
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          border-color 0.25s ease;
+      }
+
+      .work-tile img {
+        width: 100%;
+        height: 170px;
+        object-fit: contain;
+        background: #f2f8ff;
+      }
+
+      .work-tile.certificate-tile img {
+        height: auto;
+        max-height: none;
+        object-fit: contain;
+        background: #ffffff;
+        padding: 6px;
+        display: block;
+      }
+
+      .work-tile-body {
+        padding: 13px 13px 14px;
+      }
+
+      .work-tile .tag {
+        display: inline-block;
+        font-size: 0.72rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        border-radius: 999px;
+        background: #e8f2ff;
+        color: var(--accent-soft);
+        padding: 4px 8px;
+        font-weight: 600;
+      }
+
+      .work-tile h3 {
+        margin: 8px 0 0;
+        color: var(--text-main);
+        font-size: 0.95rem;
+        line-height: 1.35;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition:
+          opacity 0.55s ease,
+          transform 0.55s ease;
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .card:hover,
+      .detail-card:hover,
+      .upload-card:hover,
+      .work-tile:hover {
+        transform: translateY(-4px);
+        border-color: #d8e4f0;
+        box-shadow: 0 14px 30px rgba(15, 32, 45, 0.1);
+      }
+
+      @media (max-width: 992px) {
+        .cards,
+        .details-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .work-shell {
+          grid-template-columns: 1fr;
+        }
+
+        .prdimg-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 768px) {
+        .service-hero {
+          padding: 96px 14px 48px;
+        }
+
+        .service-hero-content {
+          padding: 24px 18px;
+          border-radius: 18px;
+        }
+
+        .services,
+        .popular-details,
+        .work-section {
+          padding: 42px 14px;
+        }
+
+        .cards,
+        .details-grid,
+        .work-showcase,
+        .work-articles-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .prdimg-section {
+          padding: 0 14px 62px;
+        }
+
+        .prdimg-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="img/logo-metalyst.png" alt="Metalyst Precision logo" />
+        <div class="brand-copy">
+          <span class="brand-name">Metalyst Precision Pvt. Ltd.</span>
+          <span class="brand-sub">Precision Machining Partner</span>
+        </div>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="nav-links">
+       
+ <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+       
+        <a
+          href="https://wa.me/919844484145?text=Hi%20Metalyst%20Precision%20Private%20Limited!%20I%20am%20interested%20in%20your%20precision%20machining%20solutions.%20Please%20share%20more%20details."
+          class="btn-yellow"
+          >Enquiry ➜</a
+        >
+      </nav>
+    </header>
+
+    <section class="service-hero reveal" id="services">
+      <div class="service-hero-content">
+        <h2>We provide <br /><span>Best Quality</span></h2>
+        <h1 class="bg-text">Precision</h1>
+        <p class="precision-intro">
+          Metalyst Precision Private Limited specializes in precision
+          manufacturing and engineered components, delivering high-quality
+          solutions with accuracy, reliability, and consistent excellence to
+          industrial, engineering, and OEM segments.
+        </p>
+      </div>
+    </section>
+
+    <section class="services reveal">
+      <h2>Custom CNC Machining Solutions</h2>
+      <p>
+        From prototype components to production quantities, we deliver reliable
+        VMC machining and CNC job work tailored to customer drawings and
+        specifications.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1740209475472-aa7d280f7452?auto=format&fit=crop&w=1400&q=80"
+            alt="CNC Machining"
+          />
+          <h3>CNC Machining</h3>
+          <p>
+            Precision CNC machining for complex components in ferrous and
+            non-ferrous materials with consistent dimensional accuracy.
+          </p>
+          <a href="index.html#service">Learn More →</a>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1738162837438-92ff852619a1?auto=format&fit=crop&w=1400&q=80"
+            alt="VMC Machining"
+          />
+          <h3>VMC Machining</h3>
+          <p>
+            High-precision VMC job work for parts requiring tight tolerances and
+            good surface finish.
+          </p>
+          <a href="index.html#service">Learn More →</a>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1738162837330-9257f938463c?auto=format&fit=crop&w=1400&q=80"
+            alt="Custom Machining"
+          />
+          <h3>Custom Machining</h3>
+          <p>
+            Machining solutions executed strictly as per customer drawings,
+            specifications, and delivery requirements.
+          </p>
+          <a href="index.html#service">Learn More →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="popular-details reveal">
+      <div class="section-header">
+        <span class="tag">Manufacturing</span>
+        <h2>Metalyst Precision <span>Services & Solutions</span></h2>
+      </div>
+
+      <div class="details-grid">
+        <div class="detail-card">
+          <img
+            src="https://images.unsplash.com/photo-1740209475472-aa7d280f7452?auto=format&fit=crop&w=1400&q=80"
+            alt="Precision Manufactured Components"
+          />
+          <h3>Precision Manufactured Components</h3>
+          <ul>
+            <li>
+              <strong>Capability:</strong> High-accuracy components to stringent
+              requirements
+            </li>
+            <li>
+              <strong>Accuracy:</strong> Tight dimensional and performance
+              tolerances
+            </li>
+            <li><strong>Materials:</strong> Ferrous and non-ferrous metals</li>
+            <li><strong>Applications:</strong> Industrial and OEM segments</li>
+          </ul>
+        </div>
+
+        <div class="detail-card">
+          <img
+            src="https://images.unsplash.com/photo-1738162837408-5fbf53f0b97a?auto=format&fit=crop&w=1400&q=80"
+            alt="Custom Metal Fabrication"
+          />
+          <h3>Custom Metal Fabrication</h3>
+          <ul>
+            <li>
+              <strong>Service:</strong> Tailor-made metal parts and assemblies
+            </li>
+            <li>
+              <strong>Customization:</strong> Designed per customer
+              specifications
+            </li>
+            <li><strong>Flexibility:</strong> Drawing-based execution</li>
+            <li><strong>Support:</strong> End-to-end production control</li>
+          </ul>
+        </div>
+
+        <div class="detail-card">
+          <img
+            src="https://images.unsplash.com/photo-1764114441123-586d13fc6ece?auto=format&fit=crop&w=1400&q=80"
+            alt="Machining & Finishing Solutions"
+          />
+          <h3>Machining & Finishing Solutions</h3>
+          <ul>
+            <li><strong>Processes:</strong> CNC/VMC precision machining</li>
+            <li>
+              <strong>Finishing:</strong> Complete inspection and quality
+              assurance
+            </li>
+            <li>
+              <strong>Quality:</strong> Durability and performance verification
+            </li>
+            <li><strong>Reliability:</strong> Consistent, repeatable output</li>
+          </ul>
+        </div>
+
+        <div class="detail-card">
+          <img
+            src="https://images.unsplash.com/photo-1738162837389-3b02d6dd507b?auto=format&fit=crop&w=1400&q=80"
+            alt="Industries Served"
+          />
+          <h3>Industries Served</h3>
+          <ul>
+            <li>
+              <strong>Manufacturing & Engineering:</strong> Precision components
+            </li>
+            <li>
+              <strong>Industrial Equipment:</strong> Engineered assemblies
+            </li>
+            <li><strong>Automotive & Auto Ancillary:</strong> OEM solutions</li>
+            <li><strong>General Engineering:</strong> Custom manufacturing</li>
+          </ul>
+        </div>
+
+        <div class="detail-card">
+          <img
+            src="https://images.unsplash.com/photo-1738162837619-5d0b158abcec?auto=format&fit=crop&w=1400&q=80"
+            alt="Core Values"
+          />
+          <h3>Our Core Values</h3>
+          <ul>
+            <li><strong>Integrity:</strong> Ethical business practices</li>
+            <li>
+              <strong>Innovation:</strong> Continuous technical advancement
+            </li>
+            <li><strong>Customer Focus:</strong> Exceeding expectations</li>
+            <li>
+              <strong>Quality & Teamwork:</strong> Excellence through
+              collaboration
+            </li>
+          </ul>
+        </div>
+
+        <div class="upload-card">
+          <div class="upload-box">
+            <h3>Metalyst Precision Support</h3>
+            <p>
+              Delivering precision manufacturing solutions with advanced
+              processes, skilled expertise, ISO 9001:2015 certification, and
+              dedicated customer support since August 2023.
+            </p>
+            <a href="contact.html" class="btn-primary">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work-section reveal">
+      <div class="work-shell">
+        <article class="work-overview">
+          <span class="work-kicker">Capability Snapshot</span>
+          <h2>Shaping <span>Precision Through Expertise</span></h2>
+          <p>
+            At Metalyst Precision Private Limited, we deliver precision
+            manufacturing solutions built on advanced processes, skilled
+            expertise, and strict quality standards. Founded in August 2023, we
+            serve industrial, engineering, and OEM segments.
+          </p>
+          <ul class="work-points">
+            <li>
+              Precision-driven manufacturing with advanced processes and
+              technical expertise.
+            </li>
+            <li>
+              Custom solutions designed to meet stringent dimensional and
+              performance requirements.
+            </li>
+            <li>ISO 9001:2015 certified quality management system.</li>
+            <li>On-time delivery and dedicated customer support.</li>
+            <li>
+              Skilled professionals focused on innovation and continuous
+              improvement.
+            </li>
+            <li>Competitive pricing without compromising quality standards.</li>
+          </ul>
+
+          <div class="work-points-cert">
+            <article class="work-tile certificate-tile">
+              <img
+                src="img/presicon/IMG_0516.JPG.jpeg"
+                alt="Machined component profile"
+              />
+              <div class="work-tile-body">
+                <span class="tag">Capability</span>
+                <h3>Precision Machined Components for OEM Applications</h3>
+              </div>
+            </article>
+          </div>
+        </article>
+
+        <div class="work-showcase">
+          <article class="work-tile certificate-tile">
+            <img
+              src="img/presicon/IMG_2752.JPG.jpeg"
+              alt="CNC milling output"
+            />
+            <div class="work-tile-body">
+              <span class="tag">Machining</span>
+              <h3>Controlled CNC and VMC Machining Process</h3>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="prdimg-section reveal" id="prdimg">
+      <div class="prdimg-header">
+        <h2>View Our <span>Precision</span></h2>
+        <p>
+          A quick look at our machined component output. 9 images are shown here
+          in 3 rows. Click View More to open the full gallery page.
+        </p>
+      </div>
+
+      <div class="prdimg-grid">
+        <article class="prdimg-card">
+          <img
+            src="img/presicon/WhatsApp Image 2026-04-13 at 7.01.20 PM.jpeg"
+            alt="Precision part 1"
+          />
+        </article>
+        <article class="prdimg-card">
+          <img
+            src="img/presicon/WhatsApp Image 2026-04-13 at 7.01.20 PM (1).jpeg"
+            alt="Precision part 2"
+          />
+        </article>
+        <article class="prdimg-card">
+          <img
+            src="img/presicon/WhatsApp Image 2026-04-13 at 7.01.21 PM.jpeg"
+            alt="Precision part 3"
+          />
+        </article>
+        <article class="prdimg-card">
+          <img
+            src="img/presicon/WhatsApp Image 2026-04-13 at 7.01.21 PM (1).jpeg"
+            alt="Precision part 4"
+          />
+        </article>
+        <article class="prdimg-card">
+          <img
+            src="img/presicon/WhatsApp Image 2026-04-14 at 8.06.40 AM.jpeg"
+            alt="Precision part 5"
+          />
+        </article>
+        <article class="prdimg-card">
+          <img
+            src="img/presicon/IMG_0516.JPG.jpeg"
+            alt="Precision part 6"
+          />
+        </article>
+        <article class="prdimg-card">
+          <img
+            src="img/presicon/IMG_2752.JPG.jpeg"
+            alt="Precision part 7"
+          />
+        </article>
+      </div>
+
+      <div class="prdimg-actions">
+        <a href="precision-gallery.html" class="prdimg-view-more">
+          View More
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Left Column -->
+        <div class="footer-brand">
+          <img src="img/logo-metalyst.png" alt="Metalyst Precision Logo" class="logo" />
+          <p>
+            MANUFACTURE AND SUPPLY OF PRECISION MACHINED COMPONENTS, JIGS &
+            FIXURES, DIES & MOULDS.
+          </p>
+        </div>
+
+        <!-- Quick Menu -->
+        <div class="footer-links">
+          <h4>Quick Menu</h4>
+          <ul>
+            <li><a href="machine.html">VMC Milling & Drilling</a></li>
+            <li><a href="#service">VMC Drilling</a></li>
+            <li><a href="index.html">About Us</a></li>
+            <li><a href="contact.html">Get a Quote</a></li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">FAQs</a></li>
+            <li><a href="contact.html">Quality Policy</a></li>
+            <li><a href="contact.html">Certifications</a></li>
+          </ul>
+        </div>
+
+        <!-- Social -->
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#" title="Facebook" target="_blank" rel="noopener">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" title="Instagram" target="_blank" rel="noopener">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://wa.me/919844484145?text=Hello%20Metalyst%20Precision%20Private%20Limited%2C%20I%20am%20interested%20in%20your%20precision%20machining%20solutions."
+              target="_blank"
+              rel="noopener"
+              title="WhatsApp"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="footer-contact">
+          <p>
+            <a
+              href="https://maps.app.goo.gl/YwzaSE9wYyrj9JaE9?g_st=iw"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fas fa-map-marker-alt"></i>
+              #61, 1st Main Road, 2nd Cross, Nadakerappa Industrial Estate,
+              Andrahalli Main Road, Peenya 2nd Stage, Bangalore - 560091
+            </a>
+          </p>
+
+          <p>
+            <i class="fas fa-user-tie"></i> Founder & Managing Director:
+            [Leadership Team]
+          </p>
+
+          <p>
+            <a href="tel:+919844484145">
+              <i class="fas fa-phone-alt"></i> +91 9844484145
+            </a>
+          </p>
+
+          <p>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=metalystprecision@gmail.com"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fas fa-envelope"></i> metalystprecision@gmail.com
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© Copyright 2026. Metalyst Precision Private Limited.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        if (menuToggle && navLinks) {
+          menuToggle.addEventListener("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            navLinks.classList.toggle("active");
+          });
+
+          document.addEventListener("click", function (event) {
+            if (
+              !menuToggle.contains(event.target) &&
+              !navLinks.contains(event.target)
+            ) {
+              navLinks.classList.remove("active");
+            }
+          });
+        }
+
+        const revealNodes = document.querySelectorAll(".reveal");
+        const observer = new IntersectionObserver(
+          function (entries, revealObserver) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                revealObserver.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15, rootMargin: "0px 0px -40px 0px" },
+        );
+
+        revealNodes.forEach(function (node) {
+          observer.observe(node);
+        });
+      });
+    </script>
+  </body>
+</html>
