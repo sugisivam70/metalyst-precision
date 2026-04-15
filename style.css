@@ -2155,7 +2155,7 @@ a {
 }
 @media (max-width: 420px) {
   .footer-brand .logo {
-    max-width: 150px;
+    max-width: 200px;
     margin-bottom: 15px;
     height: 150px;
   }
